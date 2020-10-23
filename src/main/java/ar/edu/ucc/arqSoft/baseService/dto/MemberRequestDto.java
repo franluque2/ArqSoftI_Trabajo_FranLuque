@@ -14,8 +14,6 @@ public class MemberRequestDto implements DtoEntity {
 	private String dni;
 	
 	private String email;
-	
-	private Set<Rental> rentals;
 
 	public String getName() {
 		return name;
@@ -49,12 +47,5 @@ public class MemberRequestDto implements DtoEntity {
 		this.email = email;
 	}
 
-	public Set<Rental> getRentals() {
-		return rentals;
-	}
-
-	public void setRentals(Set<Rental> rentals) {
-		this.rentals = rentals;
-	}
 	
 }

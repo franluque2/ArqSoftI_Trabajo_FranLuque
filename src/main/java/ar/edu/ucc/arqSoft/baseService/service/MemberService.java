@@ -30,6 +30,7 @@ public class MemberService {
 		
 		MemberResponseDto response = new MemberResponseDto();
 		
+		response.setName(member.getName());
 		response.setDni(member.getDni());
 		response.setLastname(member.getLastname());
 		response.setDni(member.getDni());

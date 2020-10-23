@@ -31,8 +31,10 @@ public class RentalService {
 	public RentalResponseDto insertRental(RentalRequestDto request) {
 
 		Rental rental = new Rental();
-
-		rental.setDate((Date) Calendar.getInstance().getTime());
+		
+		java.sql.Date date = new java.sql.Date(Calendar.getInstance().getTime().getTime());
+		rental.setDate(date); //No es bonito pero asi es como me funcionaba.
+		
 		rental.setMovie(movieDao.load(request.getMovieId()));
 		rental.setMember(memberDao.load(request.getMemberId()));
 
